@@ -1,57 +1,34 @@
 package net.tomgeekery.leatherworking;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Main.MODID, version = Main.VERSION)
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
 public class Main {
 	public static final String MODID = "Leatherworking";
+	public static final String MODNAME = "Leatherworking";
 	public static final String VERSION = "0.1";
-	public static Item leatherStrip;
+	
+	@SidedProxy(clientSide="net.tomgeekery.leatherworking.ClientProxy", serverSide="net.tomgeekery.leatherworking.ServerProxy")
+	public static CommonProxy proxy;
 	
 	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		
-		/* Items */
-		
-		// Leather Strip
-		leatherStrip = new LeatherStrip();
-		GameRegistry.registerItem(leatherStrip, "leatherStrip");
-		
-		/* Recipes */
-		
-		// Leather Strip
-		GameRegistry.addRecipe(
-				new ItemStack(leatherStrip, 3),
-				"l",
-				'l', Items.leather
-		);
-		
-		// Saddle
-		GameRegistry.addRecipe(
-				new ItemStack(Items.saddle),
-				"lll",
-				" s ",
-				" i ",
-				'l', Items.leather,
-				's', leatherStrip,
-				'i', Items.iron_ingot
-		);
-		
-		/* Textures */
-		
-		// Leather Strip
-		Item leatherStripItem = GameRegistry.findItem("leatherworking", "leatherStrip");
-		ModelResourceLocation leatherStripModel =
-				new ModelResourceLocation("leatherworking:leatherStrip", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-			.register(leatherStripItem, 0, leatherStripModel);
+	public void preInit(FMLPreInitializationEvent e) {
+		this.proxy.preInit(e);
 	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent e) {
+		this.proxy.init(e);
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent e) {
+		this.proxy.postInit(e);
+	}
+	
 }
