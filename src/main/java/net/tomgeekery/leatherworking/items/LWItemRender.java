@@ -9,7 +9,15 @@ public final class LWItemRender {
 		
 		// Leatherstrip
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-	    .register(LWItems.leatherStrip, 0, new ModelResourceLocation("leatherworking:leatherstrip", "inventory"));
+	    	.register(LWItems.leatherStrip, 0, new ModelResourceLocation("leatherworking:leatherstrip", "inventory"));
+		
+		// Waterskin Empty
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+			.register(LWItems.waterSkinEmpty, 0, new ModelResourceLocation("leatherworking:waterskin_empty", "inventory"));
+		
+		// Waterskin Water
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+			.register(LWItems.waterSkinWater, 0, new ModelResourceLocation("leatherworking:waterskin_water", "inventory"));
 		
 	}
 	

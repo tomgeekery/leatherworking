@@ -15,6 +15,9 @@ public class LWCrafting {
 		// Saddle
 		GameRegistry.addRecipe(new ItemStack(Items.saddle),	"lll", " s ", " i ", 'l', Items.leather, 's', LWItems.leatherStrip,	'i', Items.iron_ingot);
 		
+		// Waterskin
+		GameRegistry.addRecipe(new ItemStack(LWItems.waterSkinEmpty), " s ", "sls", "sss", 's', LWItems.leatherStrip, 'l', Items.leather);
+		
 	}
 	
 }
