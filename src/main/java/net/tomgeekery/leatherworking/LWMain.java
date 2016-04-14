@@ -2,18 +2,20 @@ package net.tomgeekery.leatherworking;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.tomgeekery.leatherworking.proxy.CommonProxy;
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
-public class Main {
-	public static final String MODID = "Leatherworking";
-	public static final String MODNAME = "Leatherworking";
-	public static final String VERSION = "0.1";
+@Mod(modid = LWGlobal.MOD_ID, name = LWGlobal.MOD_NAME, version = LWGlobal.MOD_VERSION)
+public class LWMain {
 	
-	@SidedProxy(clientSide="net.tomgeekery.leatherworking.ClientProxy", serverSide="net.tomgeekery.leatherworking.ServerProxy")
+	@Instance(LWGlobal.MOD_ID)
+	public static LWMain instance;
+	
+	@SidedProxy(clientSide = LWGlobal.TG_CLIENT_PROXY, serverSide = LWGlobal.TG_COMMON_PROXY)
 	public static CommonProxy proxy;
 	
 	@EventHandler

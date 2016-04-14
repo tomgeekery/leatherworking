@@ -1,11 +1,9 @@
-package net.tomgeekery.leatherworking;
+package net.tomgeekery.leatherworking.proxy;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.tomgeekery.leatherworking.items.LWItemRender;
-import net.tomgeekery.leatherworking.items.LWWaterskin.LWWaterskinHandler;
+import net.tomgeekery.leatherworking.render.LWItemRender;
 
 public class ClientProxy extends CommonProxy {
 	
@@ -17,8 +15,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent e) {
 		super.init(e);
-    	LWItemRender.registerItemRenderer();
-    	MinecraftForge.EVENT_BUS.register(new LWWaterskinHandler());
+    	LWItemRender.registerItemRender();
 	}
 
 	@Override

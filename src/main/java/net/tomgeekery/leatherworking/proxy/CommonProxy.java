@@ -1,16 +1,16 @@
-package net.tomgeekery.leatherworking;
+package net.tomgeekery.leatherworking.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.tomgeekery.leatherworking.crafting.LWCrafting;
-import net.tomgeekery.leatherworking.items.LWItemRender;
 import net.tomgeekery.leatherworking.items.LWItems;
+import net.tomgeekery.leatherworking.render.LWItemRender;
 
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent e) {
-		LWItems.createItems();
+		LWItems.initItems();
     }
 
     public void init(FMLInitializationEvent e) {

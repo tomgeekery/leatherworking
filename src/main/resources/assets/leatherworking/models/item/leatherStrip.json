@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "leatherworking:items/leatherstrip"
+        "layer0": "leatherworking:items/leatherStrip"
     },
     "display": {
 	    "thirdperson": {	
