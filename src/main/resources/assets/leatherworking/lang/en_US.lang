@@ -1,3 +1,10 @@
+
+// Items
 item.leatherStrip.name=Leather Strip
 
+// Buckets
+item.waterSkin.name=Water Skin
+item.waterSkinFull.name=Full Water Skin
+
+// Creative Tabs
 itemGroup.lwCreativeTab=Leatherworking
