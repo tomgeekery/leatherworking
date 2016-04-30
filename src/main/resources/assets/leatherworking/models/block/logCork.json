@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "leatherworking:blocks/logCorkTop",
+        "side": "leatherworking:blocks/logCork"
+    }
+}

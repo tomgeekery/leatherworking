@@ -6,5 +6,8 @@ item.leatherStrip.name=Leather Strip
 item.waterSkin.name=Water Skin
 item.waterSkinFull.name=Full Water Skin
 
+// Blocks
+tile.logCork.name=Cork Log
+
 // Creative Tabs
 itemGroup.lwCreativeTab=Leatherworking
