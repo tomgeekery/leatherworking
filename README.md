@@ -6,6 +6,9 @@ An unfinished Minecraft leatherworking mod! Eventual ideas include:
 - Leather dying
 - Non-animal leather sources
 - Replacing leather drops with hide drops
+- Shark / fish leather
+- More leather items (armor, sandals!)
+- Cork items
 
 ## Items
 
