@@ -12,7 +12,7 @@ An unfinished Minecraft leatherworking mod! Eventual ideas include:
 
 ## Items
 
-### Leather strap
+### Leather strip
 Currently only used for creating saddles.
 
 ![leather strap recipe](src/main/resources/assets/leatherworking/screenshots/leatherstrip.png)
