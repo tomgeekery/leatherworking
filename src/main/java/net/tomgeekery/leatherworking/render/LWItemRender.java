@@ -10,6 +10,7 @@ public final class LWItemRender {
 		
 	public static void registerItemRender() {
 		regItem(LWItems.leatherStrip);
+		regItem(LWItems.cork);
 		regItem(LWItems.waterSkin);
 		regItem(LWItems.waterSkinFull);
 	}
