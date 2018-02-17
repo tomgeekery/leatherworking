@@ -12,27 +12,20 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
-public class Main {
-
+public class Main 
+{
 	@Instance
 	public static Main instance;
 	
-	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
+	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void PreInit(FMLPreInitializationEvent event) {
-		
-	}
+	public static void PreInit(FMLPreInitializationEvent event) {}
 	
 	@EventHandler
-	public static void init(FMLInitializationEvent event) {
-		
-	}
+	public static void init(FMLInitializationEvent event) {}
 	
 	@EventHandler
-	public static void PostInit(FMLPostInitializationEvent event) {
-		
-	}
-	
+	public static void PostInit(FMLPostInitializationEvent event) {}
 }
