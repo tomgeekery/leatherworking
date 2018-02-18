@@ -1,5 +1,3 @@
 package com.tomgeekery.leatherworking.proxy;
 
-public class CommonProxy {
-
-}
+public class CommonProxy {}

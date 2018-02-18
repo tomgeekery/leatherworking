@@ -1,5 +1,3 @@
 package com.tomgeekery.leatherworking.proxy;
 
-public class ClientProxy extends CommonProxy {
-	
-}
+public class ClientProxy extends CommonProxy {}
